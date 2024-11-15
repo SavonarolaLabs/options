@@ -20,7 +20,10 @@
 
 <div class="layout">
 	<header>
-		<div class="brand">HEDGE</div>
+		<div class="flex">
+			<img style="width:2em;height:auto;" src="/bull.png" alt="" />
+			<div class="brand ml-2">HEDGE</div>
+		</div>
 		<button class="connect-wallet">Connect Wallet</button>
 	</header>
 

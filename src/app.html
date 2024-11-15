@@ -9,4 +9,14 @@
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
+	<style>
+		input:-webkit-autofill,
+		input:-webkit-autofill:hover,
+		input:-webkit-autofill:focus,
+		input:-webkit-autofill:active {
+			-webkit-background-clip: text;
+			transition: background-color 5000s ease-in-out 0s;
+			font-size: 1.2rem !important;
+		}
+	</style>
 </html>

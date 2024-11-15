@@ -88,110 +88,127 @@
 </div>
 
 <style>
+	:root {
+		--input-bg-color: #2b2b2b;
+		--input-text-color: #ffffff;
+		--input-placeholder-color: #7a7a7a;
+	}
+
 	.widget {
-		background-color: #181818;
-		color: #d1d1d1;
-		padding: 1rem;
-		border-radius: 10px;
-		max-width: 400px;
-		margin: auto;
-		font-family: Arial, sans-serif;
+		background-color: #181818 !important;
+		color: #d1d1d1 !important;
+		padding: 1rem !important;
+		border-radius: 10px !important;
+		max-width: 400px !important;
+		margin: auto !important;
+		font-family: Arial, sans-serif !important;
 	}
 	.title {
-		font-size: 1.15rem;
-		font-weight: 600;
-		color: #d1d1d1;
-		margin-bottom: 1rem;
+		font-size: 1.15rem !important;
+		font-weight: 600 !important;
+		color: #d1d1d1 !important;
+		margin-bottom: 1rem !important;
 	}
 	.field {
-		margin-bottom: 1.5rem;
+		margin-bottom: 1.5rem !important;
 	}
 	.field-row {
-		display: flex;
-		gap: 1rem;
+		display: flex !important;
+		gap: 1rem !important;
 	}
 	.half {
-		flex: 1;
+		flex: 1 !important;
 	}
 	.label {
-		font-size: 0.9rem;
-		color: #7a7a7a;
-		margin-bottom: 0.25rem;
-		display: block;
-		font-weight: 500;
+		font-size: 0.9rem !important;
+		color: var(--input-placeholder-color) !important;
+		margin-bottom: 0.25rem !important;
+		display: block !important;
+		font-weight: 500 !important;
 	}
 	.input-wrapper {
-		position: relative;
-		display: flex;
-		align-items: center;
+		position: relative !important;
+		display: flex !important;
+		align-items: center !important;
 	}
-	.input {
-		background-color: #2b2b2b !important;
-		color: #ffffff !important;
-		border: none;
-		padding: 0.75rem;
-		padding-right: 2.5rem;
-		width: 100%;
-		border-radius: 5px;
-		font-size: 1.2rem;
-		outline: none;
-		box-shadow: none;
-		-webkit-appearance: none;
-		-moz-appearance: none;
+	.widget .input {
+		background-color: var(--input-bg-color) !important;
+		color: var(--input-text-color) !important;
+		border: none !important;
+		padding: 0.75rem !important;
+		padding-right: 2.5rem !important;
+		width: 100% !important;
+		border-radius: 5px !important;
+		font-size: 1.2rem !important;
+		outline: none !important;
+		box-shadow: none !important;
+		-webkit-appearance: none !important;
+		-moz-appearance: none !important;
 	}
-	.input::placeholder {
-		color: #7a7a7a;
+	.widget .input::placeholder {
+		color: var(--input-placeholder-color) !important;
 	}
-	.input:focus {
-		background-color: #2b2b2b !important;
-		color: #ffffff !important;
+	.widget .input:focus {
+		background-color: var(--input-bg-color) !important;
+		color: var(--input-text-color) !important;
 	}
 	.currency {
-		position: absolute;
-		right: 0.75rem;
-		font-size: 0.9rem;
-		color: #7a7a7a;
+		position: absolute !important;
+		right: 0.75rem !important;
+		font-size: 0.9rem !important;
+		color: var(--input-placeholder-color) !important;
 	}
 	.toggle-group {
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: 1.5rem;
+		display: flex !important;
+		justify-content: space-between !important;
+		margin-bottom: 1.5rem !important;
 	}
 	.toggle {
-		flex: 1;
-		text-align: center;
-		padding: 0.75rem;
-		border-radius: 5px;
-		cursor: pointer;
-		background: #2b2b2b;
-		color: #d1d1d1;
-		margin: 0 0.25rem;
-		font-size: 0.9rem;
-		font-weight: 500;
+		flex: 1 !important;
+		text-align: center !important;
+		padding: 0.75rem !important;
+		border-radius: 5px !important;
+		cursor: pointer !important;
+		background: var(--input-bg-color) !important;
+		color: var(--input-text-color) !important;
+		margin: 0 0.25rem !important;
+		font-size: 0.9rem !important;
+		font-weight: 500 !important;
 	}
 	.toggle.active {
-		background: #4caf50;
-		color: #000000;
+		background: #4caf50 !important;
+		color: #000000 !important;
 	}
 	.summary {
-		background-color: #252525;
-		color: #b0b0b0;
-		padding: 1rem;
-		border-radius: 5px;
-		margin-bottom: 1.5rem;
+		background-color: #252525 !important;
+		color: #b0b0b0 !important;
+		padding: 1rem !important;
+		border-radius: 5px !important;
+		margin-bottom: 1.5rem !important;
 	}
 	.summary-text {
-		font-size: 0.9rem;
+		font-size: 0.9rem !important;
 	}
 	.button {
-		background-color: #3a82f6;
-		color: #ffffff;
-		width: 100%;
-		padding: 0.75rem;
-		border-radius: 5px;
-		font-weight: 600;
-		font-size: 1rem;
-		cursor: pointer;
-		text-align: center;
+		background-color: #3a82f6 !important;
+		color: #ffffff !important;
+		width: 100% !important;
+		padding: 0.75rem !important;
+		border-radius: 5px !important;
+		font-weight: 600 !important;
+		font-size: 1rem !important;
+		cursor: pointer !important;
+		text-align: center !important;
+	}
+
+	/* Autofill fix for Chrome, Safari, and Firefox using CSS variables */
+	.input:-webkit-autofill,
+	.input:-webkit-autofill:focus,
+	.input:-webkit-autofill:hover,
+	.input:-internal-autofill-selected {
+		background-color: var(--input-bg-color) !important;
+		color: var(--input-text-color) !important;
+		-webkit-text-fill-color: var(--input-text-color) !important;
+		transition: background-color 0s ease-in-out 0s;
 	}
 </style>
