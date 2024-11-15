@@ -125,20 +125,25 @@
 		align-items: center;
 	}
 	.input {
-		background: #2b2b2b;
-		color: #fff;
+		background-color: #2b2b2b !important;
+		color: #ffffff !important;
 		border: none;
 		padding: 0.75rem;
 		padding-right: 2.5rem;
 		width: 100%;
 		border-radius: 5px;
 		font-size: 1.2rem;
-		/* Ensuring the background remains dark on input focus and value change */
-		appearance: none;
 		outline: none;
+		box-shadow: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+	}
+	.input::placeholder {
+		color: #7a7a7a;
 	}
 	.input:focus {
-		background: #2b2b2b; /* Keeps the same dark background on focus */
+		background-color: #2b2b2b !important;
+		color: #ffffff !important;
 	}
 	.currency {
 		position: absolute;

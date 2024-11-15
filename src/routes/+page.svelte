@@ -48,7 +48,6 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 1rem 2rem;
-		background-color: #1e1e1e;
 		backdrop-filter: blur(5px);
 		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 		position: sticky;
@@ -66,7 +65,7 @@
 	}
 
 	.connect-wallet {
-		background-color: #2b2b2b;
+		background-color: #355c37;
 		color: #fff;
 		border: none;
 		padding: 0.5rem 1rem;
@@ -77,7 +76,7 @@
 	}
 
 	.connect-wallet:hover {
-		background-color: #16a34a;
+		background-color: #0f3b1f;
 	}
 
 	.content {
@@ -85,11 +84,12 @@
 		justify-content: center;
 		align-items: center;
 		padding: 2rem;
+		flex-grow: 1;
 	}
 
 	.combined-section {
 		display: flex;
-		background-color: #181818;
+		background-color: #1818185e;
 
 		border-radius: 12px;
 		padding: 1.5rem;
@@ -105,6 +105,7 @@
 
 	.chart-container {
 		max-width: 600px;
+		height: 490px;
 	}
 
 	main {

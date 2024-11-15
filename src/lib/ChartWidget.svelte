@@ -168,6 +168,7 @@
 		font-family: Arial, sans-serif;
 		max-width: 1200px;
 		margin: auto;
+		height: 480px;
 	}
 	.header {
 		display: flex;
