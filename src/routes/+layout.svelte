@@ -3,4 +3,14 @@
 	let { children } = $props();
 </script>
 
-{@render children()}
+<div class="gradient-wrapper">
+	{@render children()}
+</div>
+
+<style>
+	.gradient-wrapper {
+		min-height: 100vh;
+		background-color: #8ec5fc;
+		background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+	}
+</style>
