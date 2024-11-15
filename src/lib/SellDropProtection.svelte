@@ -20,10 +20,10 @@
 </script>
 
 <div class="widget">
-	<div class="title">Sell Price Drop Insurance</div>
+	<div class="title">Sell Insurance — Earn ERG</div>
 
 	<div class="field">
-		<label class="label" for="servicePrice">Service Price</label>
+		<label class="label" for="servicePrice">Insurance Price</label>
 		<div class="input-wrapper">
 			<input id="servicePrice" class="input" bind:value={servicePrice} />
 			<span class="currency">ERG</span>
@@ -90,7 +90,7 @@
 	.widget {
 		background-color: #181818;
 		color: #d1d1d1;
-		padding: 1.5rem;
+		padding: 1rem;
 		border-radius: 10px;
 		max-width: 400px;
 		margin: auto;
@@ -99,9 +99,8 @@
 	.title {
 		font-size: 1.15rem;
 		font-weight: 600;
-		color: #ffffff;
+		color: #d1d1d1;
 		margin-bottom: 1rem;
-		text-align: center;
 	}
 	.field {
 		margin-bottom: 1.5rem;
@@ -134,6 +133,12 @@
 		width: 100%;
 		border-radius: 5px;
 		font-size: 1.2rem;
+		/* Ensuring the background remains dark on input focus and value change */
+		appearance: none;
+		outline: none;
+	}
+	.input:focus {
+		background: #2b2b2b; /* Keeps the same dark background on focus */
 	}
 	.currency {
 		position: absolute;
@@ -159,8 +164,8 @@
 		font-weight: 500;
 	}
 	.toggle.active {
-		background: #4caf50; /* Green color for active state */
-		color: #000000; /* Black text for better contrast */
+		background: #4caf50;
+		color: #000000;
 	}
 	.summary {
 		background-color: #252525;

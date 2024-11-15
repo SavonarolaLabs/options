@@ -20,25 +20,23 @@
 
 <div class="layout">
 	<header>
-		<div class="brand">PROFIT INSURANCE</div>
+		<div class="brand">HEDGE</div>
 		<button class="connect-wallet">Connect Wallet</button>
 	</header>
 
-	<div class="flex">
-		<ChartWidget></ChartWidget>
-		<SellDropProtection></SellDropProtection>
+	<div class="content">
+		<div class="combined-section">
+			<div class="chart-container">
+				<ChartWidget />
+			</div>
+			<div class="form-container">
+				<SellDropProtection />
+			</div>
+		</div>
 	</div>
 </div>
 
 <style>
-	:global(body) {
-		margin: 0;
-		font-family: Arial, sans-serif;
-		background-color: #8ec5fc;
-		background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
-		min-height: 100vh;
-	}
-
 	.layout {
 		display: flex;
 		flex-direction: column;
@@ -50,8 +48,9 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 1rem 2rem;
-		background-color: rgba(255, 255, 255, 0.2);
-		backdrop-filter: blur(10px);
+		background-color: #1e1e1e;
+		backdrop-filter: blur(5px);
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 		position: sticky;
 		top: 0;
 		z-index: 10;
@@ -62,12 +61,12 @@
 		font-size: 1.5rem;
 		font-weight: 700;
 		letter-spacing: 0.05em;
-		color: #1a1a1a;
+		color: #ffffff;
 		text-transform: uppercase;
 	}
 
 	.connect-wallet {
-		background-color: #333;
+		background-color: #2b2b2b;
 		color: #fff;
 		border: none;
 		padding: 0.5rem 1rem;
@@ -78,13 +77,40 @@
 	}
 
 	.connect-wallet:hover {
-		background-color: #555;
+		background-color: #16a34a;
+	}
+
+	.content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 2rem;
+	}
+
+	.combined-section {
+		display: flex;
+		background-color: #181818;
+
+		border-radius: 12px;
+		padding: 1.5rem;
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+		gap: 1rem;
+	}
+
+	.chart-container,
+	.form-container {
+		width: 100%;
+		max-width: 500px;
+	}
+
+	.chart-container {
+		max-width: 600px;
 	}
 
 	main {
 		padding: 2rem;
 		text-align: center;
-		color: #333;
+		color: #e0e0e0;
 		flex: 1;
 	}
 </style>
