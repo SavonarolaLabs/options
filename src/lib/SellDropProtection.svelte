@@ -75,7 +75,8 @@
 	<div class="summary">
 		<label class="label">Best case</label>
 		<div class="summary-text">
-			You earn {earningsErg.toFixed(2)} ERG and keep {collateralSigUSD.toFixed(2)} SigUSD.
+			You earn <span class="font-bold text-white">{earningsErg.toFixed(2)} ERG</span> and keep
+			<span class="font-bold text-white">{collateralSigUSD.toFixed(2)} SigUSD</span>.
 		</div>
 		<label class="label mt-4">Worst case</label>
 		<div class="summary-text">
