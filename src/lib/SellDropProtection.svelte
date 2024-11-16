@@ -84,7 +84,7 @@
 		</div>
 	</div>
 
-	<button class="button" on:click={submitProtection}>Sell</button>
+	<button class="button" on:click={submitProtection}>Create Offer</button>
 </div>
 
 <style>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ChartWidget from '$lib/ChartWidget.svelte';
+	import OrderTable from '$lib/OrderTable.svelte';
 	import SellDropProtection from '$lib/SellDropProtection.svelte';
 	import '../app.css';
 	import { type ComponentType } from 'svelte';
@@ -22,12 +23,25 @@
 	<header>
 		<div class="flex">
 			<img style="width:2em;height:auto;" src="/bull.png" alt="" />
-			<div class="brand ml-2">HEDGE</div>
+			<div class="brand ml-2">HEDGE.EARN</div>
 		</div>
 		<button class="connect-wallet">Connect Wallet</button>
 	</header>
 
-	<div class="content">
+	<div class="content my-20">
+		<div class="text-white">
+			<div>
+				<div class="text-8xl" style="opacity:0.8">
+					<div>Hold&nbspSigUSD</div>
+					<div>Earn ERG</div>
+				</div>
+				<div>100% onchain. 100% open-source.</div>
+			</div>
+			<div style="opacity:0.8">
+				Put your stable coins to work.<br /> With HEDGE.EARN you help miners protect the downside risk
+				while earning cold hard ERG Coins.
+			</div>
+		</div>
 		<div class="combined-section">
 			<div class="chart-container">
 				<ChartWidget />
@@ -37,6 +51,7 @@
 			</div>
 		</div>
 	</div>
+	<OrderTable></OrderTable>
 </div>
 
 <style>
@@ -65,6 +80,14 @@
 		letter-spacing: 0.05em;
 		color: #ffffff;
 		text-transform: uppercase;
+		transition:
+			transform 0.2s ease,
+			color 0.2s ease;
+	}
+
+	.brand:hover {
+		transform: scale(1.05);
+		color: #3cff78;
 	}
 
 	.connect-wallet {
@@ -84,16 +107,33 @@
 
 	.content {
 		display: flex;
-		justify-content: center;
+		justify-content: space-around;
 		align-items: center;
 		padding: 2rem;
 		flex-grow: 1;
 	}
 
+	.text-white > div {
+		text-align: left;
+		max-width: 500px;
+		margin: 0 auto;
+		padding: 1rem;
+	}
+
+	.text-8xl {
+		font-weight: 800;
+	}
+
+	.text-white > div > div:last-child {
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: #a8ff9d;
+		margin-top: 1rem;
+	}
+
 	.combined-section {
 		display: flex;
 		background-color: #1818185e;
-
 		border-radius: 12px;
 		padding: 1.5rem;
 		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
